@@ -9,4 +9,4 @@ to be routed to Hookdeck
   * Associate a route to the worker from your domain (A DNS entry must exist and be proxied. The IP address you choose doesn't matter as the name will never resolve to that address).
   * You're good to go!
 
-Here's a [video]().
+Here's a [video](https://www.loom.com/share/1eac91070de74a65a2a5dfe8fb2d37c6?sharedAppSource=team_library).
