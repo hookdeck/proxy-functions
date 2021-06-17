@@ -24,7 +24,7 @@ plugins:
   - serverless-offline
 
 custom:
-  hookdeckSrc: <src_xxx> # Can be found in your connection URL, starts with src_
+  hookdeckSrc: src_<you-id-here> # Can be found in your connection URL, starts with src_
   hookdeckDomain: events.hookdeck.com
 
 provider:
