@@ -1,9 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  hd-proxy
-
-  Sample SAM Template for hd-proxy
+  hd-proxy - SAM deployment template for HD Proxy
   
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -11,11 +9,11 @@ Globals:
     Timeout: 5
     Environment:
       Variables:
-        HOOKDECK_SRC: src_PJD69XmfyFCcF88xLf56MVOY
+        HOOKDECK_SRC: 
         HOOKDECK_DOMAIN: events.hookdeck.com
         
 Resources:
-  HelloWorldFunction:
+  ProxyFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: proxy/
@@ -37,12 +35,12 @@ Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
   # Find out more about other implicit resources you can reference within SAM
   # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
-  HelloWorldApi:
-    Description: "API Gateway endpoint URL for Prod stage for Hello World function"
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
-  HelloWorldFunction:
-    Description: "Hello World Lambda Function ARN"
-    Value: !GetAtt HelloWorldFunction.Arn
-  HelloWorldFunctionIamRole:
-    Description: "Implicit IAM Role created for Hello World function"
-    Value: !GetAtt HelloWorldFunctionRole.Arn
+  ProxyApi:
+    Description: "API Gateway endpoint URL for Prod stage for Proxy function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/proxy/"
+  ProxyFunction:
+    Description: "Proxy Lambda Function ARN"
+    Value: !GetAtt ProxyFunction.Arn
+  ProxyFunctionIamRole:
+    Description: "Implicit IAM Role created for Proxy function"
+    Value: !GetAtt ProxyFunctionRole.Arn
