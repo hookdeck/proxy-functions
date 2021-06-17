@@ -11,10 +11,10 @@ Each directory has its own README file with its instructions for deployment.
 We currently offer functions for the following:
   * AWS
     * Lambda (A lambda function)
-      * serverless via serverless.com deployment (`aws-lambda/serverless`)
-      * [SAM](https://docs.aws.amazon.com/serverless-application-model/index.html) deployment (`aws-lambda/sam/`)
+      * serverless via serverless.com deployment ([`aws-lambda/serverless/`](`aws-lambda/serverless/`))
+      * [SAM](https://docs.aws.amazon.com/serverless-application-model/index.html) deployment ([`aws-lambda/sam/`](`aws-lambda/sam/`))
     * (coming soon) CloudFront function
-  * CloudFlare workers (`cloudflare/`)
+  * CloudFlare workers ([`cloudflare/`](`cloudflare/`))
 
 # Contribute
 Simply submit a PR against this repo.
