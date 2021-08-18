@@ -14,7 +14,7 @@ These next steps assume that you have a domain set up and routable through Route
   * Select your newly created custom domain and go to API mappings
   * Click `Configure API mapping` > `Add new mapping`, and select your deployed API's name (dev-hd-proxy by default if you didn't change the stage) for API, and `$default` for Stage and save.
   * Go to the Route53 service and choose the hosted zone that matches the domain you configured
-  * Click `Crate record`
+  * Click `Create record`
   * Create an A record with the name of your choosing, and toggle `Alias` to select your API path
   * In the `route traffic to` dropdown, select API Gateway > your region > the service you created
   * Click `Create records`
